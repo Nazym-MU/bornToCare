@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Resources</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+        rel="stylesheet"
+      />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://apis.google.com/js/api.js"></script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+                <div id="header">
+                        <div class="inner">
+                            <header>
+                                <h1>Resources</h1>
+                                <hr />
+                            </header>
+        						      </div>
+                                <div class="wrapper">
+                                    <div id="search-container">
+                                      <input
+                                        type="search"
+                                        id="search-input"
+                                        placeholder="Search resource name here.."
+                                      />
+                                      <button id="search" onclick="searchResource()">Search</button>
+                                    </div>
+                                    <div id="buttons">
+                                      <div id="riskTypeDropdowns">
+                                        <select id="riskTypeDropdown" onchange="filterResources()">
+                                          <option value="all">All</option>
+                                          <option value="Flooding">Flood</option>
+                                          <option value="Wildfires">Wildfire</option>
+                                          <option value="Drought">Drought</option>
+                                          <option value="Financial">Financial</option>
+                                          <option value="MultipleRisks">Multiple Risks</option>
+                                        </select>
+                                      </div>
+                                    </div>
+                                    
+                                    <div id="resources"></div>
+                                  </div>
+                                  <script src="js/main.js"></script>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="home.html">Home</a></li>
+								<li><a href="aboutUs.html">About us</a></li>
+                <li><a href="https://www.sciencedaily.com/news/earth_climate/climate/">News</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+		</div>
+
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

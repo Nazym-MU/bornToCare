@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Question Neighborhoods</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="assets/css/main.css" />
+        <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    </head>
+    <body>
+        <div id="page-wrapper">
+
+                <div id="header">
+                        <div class="inner">
+                            <header>
+                                <h1>Select your neighborhood</a></h1>
+                                <hr />
+                            </header>
+                            <footer>
+                                <input type="text" id="areaInput" placeholder="Start typing...">
+                                <datalist id="areas">
+                                    <option value="Alamo Square">
+                                    <option value="Anza Vista">
+                                    <option value="Ashbury Heights">
+                                    <option value="Balboa Hollow">
+                                    <option value="Balboa Terrace">
+                                    <option value="Bayview">
+                                    <option value="Bernal Heights">
+                                    <option value="Castro">
+                                    <option value="Chinatown">
+                                    <option value="Financial District">
+                                    <option value="Haight-Ashbury">
+                                    <option value="Hayes Valley">
+                                    <option value="Mission District">
+                                    <option value="Nob Hill">
+                                    <option value="North Beach">
+                                    <option value="Pacific Heights">
+                                    <option value="Richmond District">
+                                    <option value="Russian Hill">
+                                    <option value="SoMa (South of Market)">
+                                    <option value="Sunset District">
+                                    <option value="Tenderloin">
+                                    <option value="Union Square">
+                                    <option value="Western Addition">
+                                            
+                                </datalist>
+                                <div id="optionsContainer"></div>
+								<button class="button-rounded" style="margin-top: 10px;" onclick="window.location.href='resources.html'">Next</button>
+                                <script>
+                                    $(document).ready(function () {
+                                        $('#areaInput').on('input', function () {
+                                            updateOptions();
+                                        });
+                            
+                                        function updateOptions() {
+                                            const inputValue = $('#areaInput').val().toLowerCase();
+                                            const datalistOptions = $('#areas').children();
+                                            $('#optionsContainer').empty();
+                            
+                                            datalistOptions.each(function () {
+                                                const optionValue = $(this).val().toLowerCase();
+                            
+                                                if (optionValue.includes(inputValue)) {
+                                                    const optionButton = $('<button>').addClass('option-button').text($(this).val());
+                                                    optionButton.on('click', function () {
+                                                        $('#areaInput').val($(this).text());
+                                                        $('#optionsContainer').empty();
+                                                    });
+                                                    $('#optionsContainer').append(optionButton);
+                                                }
+                                            });
+                                        }
+                                    });
+                                </script>
+							</footer>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="home.html">Home</a></li>
+								<li><a href="aboutUs.html">About us</a></li>
+                                <li><a href="https://www.sciencedaily.com/news/earth_climate/climate/">News</a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.dropotron.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
